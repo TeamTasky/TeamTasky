@@ -10,17 +10,15 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [RouterLink, RouterLinkActive, CommonModule],
   template: `
-    <header class="font-bold h-16 flex justify-between items-center bg-accent">
+    <header class="font-bold h-16 flex justify-between items-center bg-dark-blue">
       <div class="flex items-center">
-        <button class="text-white px-4" (click)="toggleSidebar()">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-          </svg>
+        <button [routerLink]="['/dashboard']" class="bg-transparent">
+          <img [src]="'assets/img/icono.png'" alt="User Photo" class="h-12 w-12 ml-3 object-cover md:w-38">
         </button>
       </div>
-      <div class="">
-        <button [routerLink]="['/account']" class="px-4">
-          <div class="">
+      <div class="bg-transparent">
+        <button [routerLink]="['/account']" class="px-4 bg-transparent">
+          <div class="bg-transparent">
           <img *ngIf="isAuthenticated && user.photoURL; else defaultImage" [src]="user?.photoURL" alt="User Photo" class="h-10 w-10 object-cover md:w-38 rounded-full">
           <ng-template #defaultImage>
             <img [src]="'assets/img/default-user.png'" alt="User Photo" class="h-10 w-10 object-cover md:w-38 rounded-full">

@@ -7,10 +7,12 @@
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 
-$color-bg: #51535733;
+$color-bg: #eeecec;
 $color-text: #222831;
 $color-accent: #D65A31;
+$color-accent-light: #eeb29f;
 $color-light: #EEEEEE;
+$color-darkblue: #0b2750;
 
 /* Genral styles */
 body {
@@ -22,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, span, div {
-  color: $color-text;
+  color: $color-darkblue;
 }
 
 a {
@@ -47,10 +49,18 @@ button {
     background-color: $color-accent;
   }
   
+  .bg-accent-light {
+    background-color: $color-accent-light;
+  }
+  
   .bg-light {
     background-color: $color-light;
   }
   
+  .bg-dark-blue {
+    background-color: $color-darkblue;
+  } 
+
   .bg-transparent {
     background-color: transparent;
   }
@@ -65,6 +75,10 @@ button {
   
   .txt-accent {
     color: $color-accent;
+  }
+  
+  .txt-accent-light {
+    color: $color-accent-light;
   }
   
   .txt-light {
