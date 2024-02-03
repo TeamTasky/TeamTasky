@@ -1,0 +1,25 @@
+<div class="flex flex-col">
+    <div class="w-full rounded bg-light txt-text p-3">
+        <div>
+            <h1 class="font-bold text-xl mb-4 txt-accent">{{team.name}}</h1>
+        </div>
+        <div class="md:flex">
+            <h2 class="block mt-1 text-sm leading-tight font-medium">{{ team.description }}</h2>
+        </div>
+
+        <div>
+            <h1 class="font-bold text-xl mt-4 mb-4 txt-accent">Members</h1>
+            <div class="mb-4 text-left flex items-center">
+                <button (click)="toggleAddMemberForm()" class="py-2 px-4 mr-3 rounded cursor-pointer">Add members</button>
+                <div *ngIf="showAddMemberForm" class="flex items-center">
+                    <input type="email" placeholder="Enter email" [formControl]="email" class="p-2 rounded border">
+                    <button (click)="addMember(team.id)" class="py-2 px-4 rounded cursor-pointer bg-accent text-white">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+</div>

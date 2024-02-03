@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+$color-bg: #51535733;
+$color-text: #222831;
+$color-accent: #D65A31;
+$color-light: #EEEEEE;
+
+/* Genral styles */
+body {
+  background-color: $color-bg;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color-text;
+}
+
+p, span, div {
+  color: $color-text;
+}
+
+a {
+  color: $color-accent;
+}
+
+button {
+  background-color: $color-accent;
+  color: $color-light;
+}
+
+/* Colors and text classes */
+.bg-bg {
+    background-color: $color-bg;
+  }
+  
+  .bg-text {
+    background-color: $color-text;
+  }
+  
+  .bg-accent {
+    background-color: $color-accent;
+  }
+  
+  .bg-light {
+    background-color: $color-light;
+  }
+  
+  .bg-transparent {
+    background-color: transparent;
+  }
+
+  .txt-bg {
+    color: $color-bg;
+  }
+  
+  .txt-text {
+    color: $color-text;
+  }
+  
+  .txt-accent {
+    color: $color-accent;
+  }
+  
+  .txt-light {
+    color: $color-light;
+  }
+  
+  .txt-transparent {
+    color: transparent;
+  }
