@@ -8,6 +8,9 @@ import { NewTeamComponent } from './components/pages/team/new-team.component';
 import { EditTeamComponent } from './components/pages/team/edit-team.component';
 import { TeamComponent } from './components/pages/team/team.component';
 import { ShareTeamComponent } from './components/pages/team/share-team.component';
+import { AdminLoginComponent } from './components/pages/admin/admin-login/admin-login.component';
+import { AdminGuard } from './shared/guards/admin.guard';
+import { AdminDashboardComponent } from './components/pages/admin/admin-dashboard/admin-dashboard.component';
 
 export const routes: Routes = [
     {
@@ -50,6 +53,15 @@ export const routes: Routes = [
     {
         path:"share-team/:id",
         component: ShareTeamComponent,
+    },
+    {
+        path:"admin",
+        component: AdminLoginComponent
+    },
+    {
+        path:"admin-dashboard",
+        component: AdminDashboardComponent,
+        canActivate: [AdminGuard]
     }
     
 ];

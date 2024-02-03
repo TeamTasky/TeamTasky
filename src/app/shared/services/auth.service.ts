@@ -56,6 +56,22 @@ export class AuthService {
       });
   }
 
+  // Login with admin user
+  loginWithAdminUser(password: string) {
+    const email = 'admin@admin.com';
+    return signInWithEmailAndPassword(this.firebaseAuthenticationService, email, password)
+      .then(async (userCredential) => {
+        sessionStorage.setItem('admin', 'true');
+        this.observeUserState();
+        return true;
+      })
+      .catch((error) => {
+        sessionStorage.removeItem('admin');
+        alert(error.message);
+        return false;
+      });
+  }
+
 // Login with Google
 loginWithGoogleProvider() {
   return signInWithPopup(this.firebaseAuthenticationService, new GoogleAuthProvider())

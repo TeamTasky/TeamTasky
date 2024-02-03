@@ -50,9 +50,18 @@ TeamTasky is a collaborative task management application built with Angular 17 a
       },
     };
    
+
+### Configure admin user
+1. Create a Firebase user with the email admin@admin.com and the desired password.
+2. Access the application and navigate to the http://localhost:4200/admin route.
+
+![AdminUser](https://i.ibb.co/G526vnR/admin.png)
+
+
 ### Usage
 1. Serve the application locally: ng serve
 2. Open your browser and navigate to http://localhost:4200/
+
 
 
 ![TeamTasky](https://i.ibb.co/BHkdK8W/app.png)
