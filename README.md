@@ -2,8 +2,6 @@
 
 TeamTasky is a collaborative task management application built with Angular 17 and Firebase.
 
-![TeamTasky](https://i.ibb.co/BHkdK8W/app.png)
-
 ## Getting Started
 
 ### Prerequisites
@@ -55,3 +53,6 @@ TeamTasky is a collaborative task management application built with Angular 17 a
 ### Usage
 1. Serve the application locally: ng serve
 2. Open your browser and navigate to http://localhost:4200/
+
+
+![TeamTasky](https://i.ibb.co/BHkdK8W/app.png)
