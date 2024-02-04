@@ -1,0 +1,22 @@
+<div class="flex flex-col pl-5">
+
+    <div>
+        <h3 class="text-xl font-bold mb-4 txt-accent">Settings</h3>
+
+        <div class="mb-4 text-left">
+            <h6 class="font-bold mt-4 mb-2 txt-dark-blue">Allow users creation</h6>
+            <mat-slide-toggle [color]="color" [checked]="allowUserCreation" (change)="onToggleAllowUserCreation($event)">
+            </mat-slide-toggle>
+            <span class="text-xs">Check if you want to allow users to create accounts.</span>
+        </div>
+
+        <div class="mb-4 text-left">
+            <h6 class="font-bold mt-4 mb-2 txt-dark-blue">Allow login and signup with Google account</h6>
+            <mat-slide-toggle [color]="color" [checked]="allowGoogleAccount" (change)="onToggleAllowGoogleAccount($event)">
+            </mat-slide-toggle>
+            <span class="text-xs">Check if you want to allow use of Google accounts.</span>
+        </div>
+
+    </div>
+
+</div>

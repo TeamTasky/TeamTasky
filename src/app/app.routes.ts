@@ -12,6 +12,9 @@ import { AdminLoginComponent } from './components/pages/admin/admin-login/admin-
 import { AdminGuard } from './shared/guards/admin.guard';
 import { AdminDashboardComponent } from './components/pages/admin/admin-dashboard/admin-dashboard.component';
 import { SignupGuard } from './shared/guards/settings.guard';
+import { SettingsComponent } from './components/pages/admin/admin-dashboard/settings/settings.component';
+import { TeamsComponent } from './components/pages/admin/admin-dashboard/teams/teams.component';
+import { UsersComponent } from './components/pages/admin/admin-dashboard/users/users.component';
 
 export const routes: Routes = [
     {
@@ -63,7 +66,24 @@ export const routes: Routes = [
     {
         path:"admin-dashboard",
         component: AdminDashboardComponent,
-        canActivate: [AdminGuard]
+        canActivate: [AdminGuard],
+        children: [
+            {
+                path: 'admin-settings',
+                component: SettingsComponent,
+                canActivate: [AdminGuard]
+            },
+            {
+                path: 'admin-teams',
+                component: TeamsComponent,
+                canActivate: [AdminGuard]
+            },
+            {
+                path: 'admin-users',
+                component: UsersComponent,
+                canActivate: [AdminGuard]
+            }
+        ]
     }
     
 ];

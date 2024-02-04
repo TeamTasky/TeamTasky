@@ -45,7 +45,7 @@ export class AccountComponent implements OnInit {
       }
     }
 
-    const resp = this.teamService.getTeamsByAdminId(this.user?.id || '');
+    const resp = await this.teamService.getTeamsByAdminId(this.user?.id || '');
     if (resp) {
       resp.subscribe((teams) => {
         this.myTeams = teams;
