@@ -4,8 +4,9 @@
 @tailwind utilities;
 
 
-/* Importing Bootstrap SCSS file. */
+/* Importings */
 @import 'bootstrap/scss/bootstrap';
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
 
 $color-bg: #eeecec;
 $color-text: #222831;
@@ -83,6 +84,10 @@ button {
   
   .txt-light {
     color: $color-light;
+  }
+
+  .txt-dark-blue {
+    color: $color-darkblue;
   }
   
   .txt-transparent {

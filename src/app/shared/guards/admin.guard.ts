@@ -11,6 +11,7 @@ export class AdminGuard implements CanActivate{
     if (sessionStorage.getItem('admin') === 'true'){
       return true;
     } else {
+      this.router.navigate(['/admin']);
       return false;
     }
   }

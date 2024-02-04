@@ -11,6 +11,7 @@ import { ShareTeamComponent } from './components/pages/team/share-team.component
 import { AdminLoginComponent } from './components/pages/admin/admin-login/admin-login.component';
 import { AdminGuard } from './shared/guards/admin.guard';
 import { AdminDashboardComponent } from './components/pages/admin/admin-dashboard/admin-dashboard.component';
+import { SignupGuard } from './shared/guards/settings.guard';
 
 export const routes: Routes = [
     {
@@ -29,7 +30,8 @@ export const routes: Routes = [
     },
     {
         path:"signup",
-        component: SignupComponent
+        component: SignupComponent,
+        canActivate: [SignupGuard]
     },
     {
         path:"account",

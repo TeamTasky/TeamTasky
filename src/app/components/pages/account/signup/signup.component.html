@@ -34,7 +34,7 @@
                 Signup
             </button>
 
-            <button type="click" (click)="signupWithGoogle()" class="flex items-center justify-center w-full
+            <button *ngIf="allowGoogleAccount" type="click" (click)="signupWithGoogle()" class="flex items-center justify-center w-full
             focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                 Signup with Google
             </button>

@@ -16,6 +16,7 @@ export class AdminLoginComponent {
     if (user === 'admin') {
       const admin = await this.authService.loginWithAdminUser(password);
       if (admin) {
+        sessionStorage.setItem('admin', 'true');
         console.log('Usuario y contraseña correctos');
         this.router.navigate(['/admin-dashboard']);
       }

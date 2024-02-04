@@ -32,7 +32,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent implements OnInit{
   isAuthenticated = false;
-  user: any; 
+  user: any;
 
   constructor(
     private authService: AuthService, 
@@ -46,6 +46,9 @@ export class HeaderComponent implements OnInit{
     const user = localStorage.getItem('user');
     if (user) {
       this.user = JSON.parse(user);
+    }
+
+    if (user && this.user.photoURL != null) {
       this.user = await this.authService.getUser(this.user.uid);
       if (this.user) {
         this.user = {
@@ -57,7 +60,7 @@ export class HeaderComponent implements OnInit{
           createdAt: this.user.createdAt,
         };
       }
-    }
+    } 
   }
 
   logout() {

@@ -17,7 +17,7 @@ import { AccountComponent } from './components/pages/account/account.component';
     HeaderComponent,
     LoginComponent,
     SignupComponent,
-    AccountComponent
+    AccountComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
